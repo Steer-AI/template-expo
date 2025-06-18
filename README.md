@@ -1,50 +1,84 @@
-# Welcome to your Expo app 👋
+# Project Quickstart
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This Expo project was vibe coded with [SteerCode](https://steercode.com).
 
-## Get started
+Follow this guide to quickly edit, run, and publish your Expo app.
 
-1. Install dependencies
+## Project Access
+
+Visit your project directly here:
+
+[\<YOUR_PROJECT_URL>](YOUR_PROJECT_URL)
+
+## How to Edit Your Project
+
+You have multiple ways to manage your Expo project:
+
+### Using SteerCode
+
+* Access your [project at SteerCode](YOUR_PROJECT_URL).
+* Edit using simple prompts.
+* All changes are auto-saved to your repository.
+
+### Using a Local IDE
+
+To work locally, follow these steps:
+
+1. **Clone Your Repository**
+
+   ```bash
+   git clone <YOUR_GIT_URL>
+   ```
+
+2. **Navigate to Your Project Directory**
+
+   ```bash
+   cd <YOUR_PROJECT_NAME>
+   ```
+
+3. **Install Dependencies**
+
+   Ensure Node.js and npm are installed ([install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)):
 
    ```bash
    npm install
    ```
 
-2. Start the app
+4. **Run the Expo Development Server**
+
+   Launch your Expo project:
 
    ```bash
-   npx expo start
+   npm start
    ```
 
-In the output, you'll find options to open the app in a
+   Scan the QR code using Expo Go or run in an emulator.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Editing Directly on GitHub
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+For quick edits:
 
-## Get a fresh project
+* Open the file on GitHub.
+* Click the pencil icon to edit.
+* Make changes and commit directly.
 
-When you're ready, run:
+## Tech Stack
 
-```bash
-npm run reset-project
-```
+This Expo project uses:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+* **Expo SDK 53** – easy React Native app development
+* **React Native** – build native apps with JavaScript
+* **TypeScript** – strongly-typed JavaScript
+* **expo-router** – simple navigation
+* **Supabase** – backend auth & database
+* **Tailwind CSS** – utility-first styling (via NativeWind)
+* **Expo Vector Icons** – built-in icon sets
 
-## Learn more
+## Publishing Your Project
 
-To learn more about developing your project with Expo, look at the following resources:
+Publish your project easily:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+* Open [SteerCode](YOUR_PROJECT_URL).
+* Click the **Publish** button.
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Happy coding!
