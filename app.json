@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "template-expo",
-    "slug": "template-expo",
+    "name": "steercode-project",
+    "slug": "steercode-project",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "templateexpo",
+    "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
