@@ -1,7 +1,7 @@
 import { Switch } from 'react-native';
 
 import { useColorScheme } from '@/lib/useColorScheme';
-import { COLORS } from '@/theme/colors';
+import { WHITE } from '@/theme/colors';
 
 function Toggle(props: React.ComponentPropsWithoutRef<typeof Switch>) {
   const { colors } = useColorScheme();
@@ -11,7 +11,7 @@ function Toggle(props: React.ComponentPropsWithoutRef<typeof Switch>) {
         true: colors.primary,
         false: colors.grey,
       }}
-      thumbColor={COLORS.white}
+      thumbColor={WHITE}
       {...props}
     />
   );

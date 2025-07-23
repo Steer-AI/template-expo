@@ -3,7 +3,7 @@ import { useColorScheme as useNativewindColorScheme } from "nativewind";
 import * as React from "react";
 import { Platform } from "react-native";
 
-import { COLORS } from "@/theme/colors";
+import { colors, Scheme } from "@/theme/colors";
 
 function useColorScheme() {
   const { colorScheme, setColorScheme: setNativewindColorScheme } =
@@ -28,7 +28,7 @@ function useColorScheme() {
     isDarkColorScheme: colorScheme === "dark",
     setColorScheme,
     toggleColorScheme,
-    colors: COLORS[colorScheme ?? "light"],
+    colors: colors[colorScheme ?? "light"],
   };
 }
 

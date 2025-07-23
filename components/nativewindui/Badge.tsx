@@ -62,9 +62,10 @@ export function Badge({
       <Text
         variant={textVariant}
         className={cn('font-extrabold text-white', className)}
-        children={getCount(children, maxCount)}
         {...props}
-      />
+      >
+        {getCount(children, maxCount)}
+      </Text>
     </View>
   );
 }

@@ -177,8 +177,9 @@ const ContextMenu = React.forwardRef<ContextMenuRef, ContextMenuProps>(
                     <ContextMenuAuxiliaryPreview
                       onLayout={onLayout}
                       style={positionStyle}
-                      children={renderAuxiliaryPreview()}
-                    />
+                    >
+                      {renderAuxiliaryPreview()}
+                    </ContextMenuAuxiliaryPreview>
                   )}
                   <ContextMenuPrimitive.Content
                     insets={{

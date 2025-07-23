@@ -5,7 +5,7 @@ import * as React from 'react';
 import { Platform } from 'react-native';
 
 import { cn } from '@/lib/utils';
-import { COLORS } from '@/theme/colors';
+import { WHITE } from '@/theme/colors';
 
 type CheckboxProps = Omit<CheckboxPrimitive.RootProps, 'checked' | 'onCheckedChange'> & {
   defaultChecked?: boolean;
@@ -46,7 +46,7 @@ const Checkbox = React.forwardRef<CheckboxPrimitive.RootRef, CheckboxProps>(
             name="check"
             ios={{ weight: 'medium' }}
             size={Platform.select({ ios: 15, default: 16 })}
-            color={COLORS.white}
+            color={WHITE}
           />
         </CheckboxPrimitive.Indicator>
       </CheckboxPrimitive.Root>

@@ -6,7 +6,7 @@ import { Platform, Pressable, PressableProps, View, ViewStyle } from 'react-nati
 import { TextClassContext } from '@/components/nativewindui/Text';
 import { cn } from '@/lib/utils';
 import { useColorScheme } from '@/lib/useColorScheme';
-import { COLORS } from '@/theme/colors';
+import { colors } from '@/theme/colors';
 
 const buttonVariants = cva('flex-row items-center justify-center gap-2', {
   variants: {
@@ -84,16 +84,16 @@ function convertToRGBA(rgb: string, opacity: number): string {
 
 const ANDROID_RIPPLE = {
   dark: {
-    primary: { color: convertToRGBA(COLORS.dark.grey3, 0.4), borderless: false },
-    secondary: { color: convertToRGBA(COLORS.dark.grey5, 0.8), borderless: false },
-    plain: { color: convertToRGBA(COLORS.dark.grey5, 0.8), borderless: false },
-    tonal: { color: convertToRGBA(COLORS.dark.grey5, 0.8), borderless: false },
+    primary: { color: convertToRGBA(colors.dark['--grey3'], 0.4), borderless: false },
+    secondary: { color: convertToRGBA(colors.dark['--grey5'], 0.8), borderless: false },
+    plain: { color: convertToRGBA(colors.dark['--grey5'], 0.8), borderless: false },
+    tonal: { color: convertToRGBA(colors.dark['--grey5'], 0.8), borderless: false },
   },
   light: {
-    primary: { color: convertToRGBA(COLORS.light.grey4, 0.4), borderless: false },
-    secondary: { color: convertToRGBA(COLORS.light.grey5, 0.4), borderless: false },
-    plain: { color: convertToRGBA(COLORS.light.grey5, 0.4), borderless: false },
-    tonal: { color: convertToRGBA(COLORS.light.grey6, 0.4), borderless: false },
+    primary: { color: convertToRGBA(colors.light['--grey4'], 0.4), borderless: false },
+    secondary: { color: convertToRGBA(colors.light['--grey5'], 0.4), borderless: false },
+    plain: { color: convertToRGBA(colors.light['--grey5'], 0.4), borderless: false },
+    tonal: { color: convertToRGBA(colors.light['--grey6'], 0.4), borderless: false },
   },
 };
 

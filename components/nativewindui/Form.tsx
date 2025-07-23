@@ -86,9 +86,10 @@ const FormSection = React.forwardRef<React.ElementRef<typeof View>, FormSectionP
               className
             )}
             style={style}
-            children={children}
             {...props}
-          />
+          >
+            {children}
+          </View>
           {!!footnote && (
             <Text
               className={cn(
