@@ -5,7 +5,6 @@ import { PortalHost } from "@rn-primitives/portal";
 import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 import { StatusBar } from "expo-status-bar";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { KeyboardProvider } from "react-native-keyboard-controller";
 import { ThemeProvider as NavigationTheme } from "@react-navigation/native";
 import ThemeProvider from "@/providers/ThemeProvider";
 
@@ -30,7 +29,6 @@ export default function RootLayout() {
       />
 
       <ActionSheetProvider>
-        <KeyboardProvider statusBarTranslucent navigationBarTranslucent>
           <GestureHandlerRootView style={{ flex: 1 }}>
             <BottomSheetModalProvider>
               <ThemeProvider>
@@ -41,7 +39,6 @@ export default function RootLayout() {
               </ThemeProvider>
             </BottomSheetModalProvider>
           </GestureHandlerRootView>
-        </KeyboardProvider>
       </ActionSheetProvider>
     </>
   );

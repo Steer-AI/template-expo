@@ -61,7 +61,6 @@
     "react-native-gesture-handler": "~2.24.0",
     "react-native-ios-context-menu": "^3.1.2",
     "react-native-ios-utilities": "^5.1.8",
-    "react-native-keyboard-controller": "^1.18.0",
     "react-native-reanimated": "~3.17.4",
     "react-native-safe-area-context": "5.4.0",
     "react-native-screens": "~4.11.1",
