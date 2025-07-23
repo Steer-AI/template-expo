@@ -1,45 +1,46 @@
+/** @type {import('tailwindcss').Config} */
+
 const { hairlineWidth, platformSelect } = require('nativewind/theme');
 
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  // NOTE: Update this to include the paths to all of your component files.
   content: ['./app/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
   presets: [require('nativewind/preset')],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        border: withOpacity('border'),
-        input: withOpacity('input'),
-        ring: withOpacity('ring'),
-        background: withOpacity('background'),
-        foreground: withOpacity('foreground'),
+        border: colorVariable('border'),
+        input: colorVariable('input'),
+        ring: colorVariable('ring'),
+        background: colorVariable('background'),
+        foreground: colorVariable('foreground'),
         primary: {
-          DEFAULT: withOpacity('primary'),
-          foreground: withOpacity('primary-foreground'),
+          DEFAULT: colorVariable('primary'),
+          foreground: colorVariable('primary-foreground'),
         },
         secondary: {
-          DEFAULT: withOpacity('secondary'),
-          foreground: withOpacity('secondary-foreground'),
+          DEFAULT: colorVariable('secondary'),
+          foreground: colorVariable('secondary-foreground'),
         },
         destructive: {
-          DEFAULT: withOpacity('destructive'),
-          foreground: withOpacity('destructive-foreground'),
+          DEFAULT: colorVariable('destructive'),
+          foreground: colorVariable('destructive-foreground'),
         },
         muted: {
-          DEFAULT: withOpacity('muted'),
-          foreground: withOpacity('muted-foreground'),
+          DEFAULT: colorVariable('muted'),
+          foreground: colorVariable('muted-foreground'),
         },
         accent: {
-          DEFAULT: withOpacity('accent'),
-          foreground: withOpacity('accent-foreground'),
+          DEFAULT: colorVariable('accent'),
+          foreground: colorVariable('accent-foreground'),
         },
         popover: {
-          DEFAULT: withOpacity('popover'),
-          foreground: withOpacity('popover-foreground'),
+          DEFAULT: colorVariable('popover'),
+          foreground: colorVariable('popover-foreground'),
         },
         card: {
-          DEFAULT: withOpacity('card'),
-          foreground: withOpacity('card-foreground'),
+          DEFAULT: colorVariable('card'),
+          foreground: colorVariable('card-foreground'),
         },
       },
       borderWidth: {
@@ -50,17 +51,23 @@ module.exports = {
   plugins: [],
 };
 
-function withOpacity(variableName) {
-  return ({ opacityValue }) => {
-    if (opacityValue !== undefined) {
-      return platformSelect({
-        ios: `rgb(var(--${variableName}) / ${opacityValue})`,
-        android: `rgb(var(--android-${variableName}) / ${opacityValue})`,
-      });
-    }
-    return platformSelect({
-      ios: `rgb(var(--${variableName}))`,
-      android: `rgb(var(--android-${variableName}))`,
-    });
-  };
+function colorVariable(variableName) {
+  return `rgb(var(--${variableName}))`;
 }
+
+// function withOpacity(variableName) {
+//   return ({ opacityValue }) => {
+//     if (opacityValue !== undefined) {
+//       return platformSelect({
+//         ios: `rgb(var(--${variableName}) / ${opacityValue})`,
+//         android: `rgb(var(--android-${variableName}) / ${opacityValue})`,
+//         default: `rgb(var(--${variableName}) / ${opacityValue})`,
+//       });
+//     }
+//     return platformSelect({
+//       ios: `rgb(var(--${variableName}))`,
+//       android: `rgb(var(--android-${variableName}))`,
+//       default: `rgb(var(--${variableName}))`,
+//     });
+//   };
+// }

@@ -5,23 +5,27 @@ import { PortalHost } from "@rn-primitives/portal";
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 import { StatusBar } from "expo-status-bar";
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { KeyboardProvider } from "react-native-keyboard-controller";
-import { ThemeProvider as NavThemeProvider } from "@react-navigation/native";
+// import { KeyboardProvider } from "react-native-keyboard-controller";
+import { ThemeProvider } from "@react-navigation/native";
 
 import { useColorScheme, useInitialAndroidBarSync } from "@/lib/useColorScheme";
 import { NAV_THEME } from "@/theme";
 import { Stack } from "expo-router";
+import { useEffect } from "react";
 
-export {
-  // Catch any errors thrown by the Layout component.
-  ErrorBoundary,
-} from "expo-router";
+// export {
+//   // Catch any errors thrown by the Layout component.
+//   ErrorBoundary,
+// } from "expo-router";
 
 export default function RootLayout() {
   useInitialAndroidBarSync();
   const { colorScheme, isDarkColorScheme } = useColorScheme();
 
-  
+  // const { colorScheme, isDarkColorScheme } = { colorScheme: "light", isDarkColorScheme: false };
+
+  console.log("colorScheme", colorScheme, isDarkColorScheme);
+
   return (
     <>
       <StatusBar
@@ -30,16 +34,16 @@ export default function RootLayout() {
       />
 
       <ActionSheetProvider>
-        <KeyboardProvider statusBarTranslucent navigationBarTranslucent>
+        {/* <KeyboardProvider statusBarTranslucent navigationBarTranslucent> */}
           <GestureHandlerRootView style={{ flex: 1 }}>
             <BottomSheetModalProvider>
-              <NavThemeProvider value={NAV_THEME[colorScheme]}>
+              <ThemeProvider value={NAV_THEME[colorScheme]}>
                 <RootNavigator />
                 <PortalHost />
-              </NavThemeProvider>
+              </ThemeProvider>
             </BottomSheetModalProvider>
           </GestureHandlerRootView>
-        </KeyboardProvider>
+        {/* </KeyboardProvider> */}
       </ActionSheetProvider>
     </>
   );
