@@ -6,7 +6,8 @@ import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 import { StatusBar } from "expo-status-bar";
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 // import { KeyboardProvider } from "react-native-keyboard-controller";
-import { ThemeProvider } from "@react-navigation/native";
+import { ThemeProvider as NavigationTheme } from "@react-navigation/native";
+import ThemeProvider from "@/providers/ThemeProvider";
 
 import { useColorScheme, useInitialAndroidBarSync } from "@/lib/useColorScheme";
 import { NAV_THEME } from "@/theme";
@@ -35,14 +36,16 @@ export default function RootLayout() {
 
       <ActionSheetProvider>
         {/* <KeyboardProvider statusBarTranslucent navigationBarTranslucent> */}
-          <GestureHandlerRootView style={{ flex: 1 }}>
-            <BottomSheetModalProvider>
-              <ThemeProvider value={NAV_THEME[colorScheme]}>
+        <GestureHandlerRootView style={{ flex: 1 }}>
+          <BottomSheetModalProvider>
+            <ThemeProvider>
+              <NavigationTheme value={NAV_THEME[colorScheme]}>
                 <RootNavigator />
                 <PortalHost />
-              </ThemeProvider>
-            </BottomSheetModalProvider>
-          </GestureHandlerRootView>
+              </NavigationTheme>
+            </ThemeProvider>
+          </BottomSheetModalProvider>
+        </GestureHandlerRootView>
         {/* </KeyboardProvider> */}
       </ActionSheetProvider>
     </>

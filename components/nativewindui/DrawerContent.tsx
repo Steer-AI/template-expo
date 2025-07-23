@@ -8,7 +8,7 @@ import { Text } from '@/components/nativewindui/Text';
 import { Button } from '@/components/nativewindui/Button';
 import { cn } from '@/lib/utils';
 import { useColorScheme } from '@/lib/useColorScheme';
-import { COLORS } from '@/theme/colors';
+import { WHITE } from '@/theme/colors';
 
 const ANDROID_ACTION_BAR_HEIGHT = 60;
 
@@ -110,7 +110,7 @@ function DrawerContentSectionItem<T extends 'sfSymbol' | 'material'>({
       <Icon
         color={
           isActive
-            ? Platform.select({ default: colors.foreground, ios: COLORS.white })
+            ? Platform.select({ default: colors.foreground, ios: WHITE })
             : Platform.select({ default: colors.grey, ios: colors.primary })
         }
         {...icon}
