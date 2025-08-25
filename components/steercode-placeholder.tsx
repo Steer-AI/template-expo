@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import { Text } from "@/components/nativewindui/text";
+import { Text } from "react-native";
 import { Image } from "expo-image";
 import { BlurView } from "expo-blur";
 
