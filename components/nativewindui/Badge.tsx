@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { View, ViewStyle } from 'react-native';
 
-import { Text } from '@/components/nativewindui/Text';
+import { Text } from '@/components/nativewindui/text';
 import { cn } from '@/lib/utils';
 
 const BORDER_CURVE: ViewStyle = {

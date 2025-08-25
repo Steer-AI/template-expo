@@ -24,10 +24,10 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ContextItem, ContextMenuProps, ContextMenuRef, ContextSubMenu } from './types';
 
-import { ActivityIndicator } from '@/components/nativewindui/ActivityIndicator';
-import { Text } from '@/components/nativewindui/Text';
-import { Button } from '@/components/nativewindui/Button';
-import { DropdownMenu } from '@/components/nativewindui/DropdownMenu';
+import { ActivityIndicator } from '@/components/nativewindui/activity-indicator';
+import { Text } from '@/components/nativewindui/text';
+import { Button } from '@/components/nativewindui/button';
+import { DropdownMenu } from '@/components/nativewindui/dropdown-menu';
 import { cn } from '@/lib/utils';
 import { useColorScheme } from '@/lib/useColorScheme';
 

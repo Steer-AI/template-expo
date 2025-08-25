@@ -1,0 +1,19 @@
+diff --git a/src/setupHMR.ts b/src/setupHMR.ts
+index ac6f32248e526942b227ccc502d97518f1ea2362..19c004d25715b970cd8cef2b9fdd38396ce61ed2 100644
+--- a/src/setupHMR.ts
++++ b/src/setupHMR.ts
+@@ -1,9 +1,11 @@
+ import HMRClient from './HMRClient';
+ 
+ if (
+-  typeof window !== 'undefined' &&
+-  // @ts-expect-error: Added via react-native-webview
+-  typeof window.ReactNativeWebView !== 'undefined'
++  typeof window !== 'undefined' 
++  
++  // &&
++  // // @ts-expect-error: Added via react-native-webview
++  // typeof window.ReactNativeWebView !== 'undefined'
+ ) {
+   // Sets up developer tools for web platforms when running in a webview. This ensures that logs are visible in the terminal.
+   // We assume full control over the console and send JavaScript logs to Metro.

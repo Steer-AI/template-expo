@@ -22,8 +22,8 @@ import type {
   NativeStackNavigationSearchBarOptions,
 } from './types';
 
-import { Button } from '@/components/nativewindui/Button';
-import { Text } from '@/components/nativewindui/Text';
+import { Button } from '@/components/nativewindui/button';
+import { Text } from '@/components/nativewindui/text';
 import { cn } from '@/lib/utils';
 import { useColorScheme } from '@/lib/useColorScheme';
 

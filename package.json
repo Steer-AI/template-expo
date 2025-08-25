@@ -39,6 +39,7 @@
     "clsx": "^2.1.1",
     "expo": "53.0.20",
     "expo-blur": "~14.1.5",
+    "expo-clipboard": "~7.1.5",
     "expo-constants": "~17.1.7",
     "expo-font": "~13.3.2",
     "expo-haptics": "~14.1.4",
@@ -80,5 +81,8 @@
     "tailwindcss": "^3.4.0",
     "typescript": "~5.8.3"
   },
-  "private": true
+  "private": true,
+  "patchedDependencies": {
+    "@expo/metro-runtime@5.0.4": "patches/@expo%2Fmetro-runtime@5.0.4.patch"
+  }
 }

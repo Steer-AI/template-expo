@@ -6,7 +6,7 @@ import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
 
 import type { SearchInputProps } from './types';
 
-import { Button } from '@/components/nativewindui/Button';
+import { Button } from '@/components/nativewindui/button';
 import { cn } from '@/lib/utils';
 import { useColorScheme } from '@/lib/useColorScheme';
 

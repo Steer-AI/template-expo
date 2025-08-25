@@ -19,7 +19,7 @@ import Animated, {
 
 import type { SearchInputProps } from './types';
 
-import { Text } from '@/components/nativewindui/Text';
+import { Text } from '@/components/nativewindui/text';
 import { cn } from '@/lib/utils';
 import { useColorScheme } from '@/lib/useColorScheme';
 

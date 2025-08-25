@@ -14,10 +14,10 @@ import Animated, {
 
 import { AlertProps, AlertRef } from './types';
 
-import { Text } from '@/components/nativewindui/Text';
-import { Button } from '@/components/nativewindui/Button';
-import { TextField } from '@/components/nativewindui/TextField';
-import { TextFieldRef } from '@/components/nativewindui/TextField/types';
+import { Text } from '@/components/nativewindui/text';
+import { Button } from '@/components/nativewindui/button';
+import { TextField } from '@/components/nativewindui/text-field';
+import { TextFieldRef } from '@/components/nativewindui/text-field/types';
 import { cn } from '@/lib/utils';
 import { useColorScheme } from '@/lib/useColorScheme';
 

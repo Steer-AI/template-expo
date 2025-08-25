@@ -5,8 +5,8 @@ import * as React from 'react';
 import { Platform, View, ViewProps } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { Button, ButtonProps } from '@/components/nativewindui/Button';
-import { Text } from '@/components/nativewindui/Text';
+import { Button, ButtonProps } from '@/components/nativewindui/button';
+import { Text } from '@/components/nativewindui/text';
 import { cn } from '@/lib/utils';
 import { useColorScheme } from '@/lib/useColorScheme';
 

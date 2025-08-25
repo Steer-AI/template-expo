@@ -3,8 +3,8 @@ import { View } from 'react-native';
 
 import { SegmentControlProps } from './types';
 
-import { Text } from '@/components/nativewindui/Text';
-import { Button } from '@/components/nativewindui/Button';
+import { Text } from '@/components/nativewindui/text';
+import { Button } from '@/components/nativewindui/button';
 import { cn } from '@/lib/utils';
 
 function SegmentedControl({

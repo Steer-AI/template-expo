@@ -19,8 +19,8 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { Text, TextClassContext } from '@/components/nativewindui/Text';
-import { Button } from '@/components/nativewindui/Button';
+import { Text, TextClassContext } from '@/components/nativewindui/text';
+import { Button } from '@/components/nativewindui/button';
 import { cn } from '@/lib/utils';
 
 cssInterop(FlashList, {

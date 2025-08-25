@@ -6,7 +6,7 @@ import { cssInterop } from 'nativewind';
 import * as React from 'react';
 import { Platform, StyleSheet, View } from 'react-native';
 
-import { Text, TextClassContext } from '@/components/nativewindui/Text';
+import { Text, TextClassContext } from '@/components/nativewindui/text';
 import { cn } from '@/lib/utils';
 import { useColorScheme } from '@/lib/useColorScheme';
 
